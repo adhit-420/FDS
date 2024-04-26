@@ -1,10 +1,6 @@
 Ideas
 
-- RAG to retrieve known fraud
-- Page Scanner for suspicious redirects
-- model for judging website based on domain name
-- portal for reporting fraudulent websites
-- measures to prevent spam of reports by rivals of a website
+
 
 System design(ig)
 
