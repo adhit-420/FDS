@@ -20,6 +20,8 @@ class OutputData(BaseModel):
 @router.get("/phish_model")
 async def predict_phish_model(url: str):
     model = RFModel()
-    pred = model.predict([url])
-    proba = model.predict_proba([url])
-    return {pred: pred, proba: proba}
+    pred = model.predict([url])[0]
+    proba = max(model.predict_proba([url])[0])
+    print(pred)
+    print(proba)
+    return {"pred": pred, "proba": proba}
