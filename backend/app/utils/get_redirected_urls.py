@@ -5,7 +5,7 @@ import urllib.parse
 
 def get_redirected_urls(url):
     try:
-        response = requests.get(url, allow_redirects=False)
+        response = requests.get(url, allow_redirects=True000000000000)
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, "html.parser")
             links = soup.find_all("a", href=True)
